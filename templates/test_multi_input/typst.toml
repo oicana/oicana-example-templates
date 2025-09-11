@@ -1,0 +1,27 @@
+[package]
+name = "test_multi_input"
+version = "0.1.0"
+entrypoint = "template.typ"
+authors = ["Niklas Eicker <git@nikl.me>"]
+description = "A test template for multiple input sets."
+
+[tool.oicana]
+manifest_version = 1
+
+[[tool.oicana.inputs]]
+type = "json"
+key = "one"
+default = "sample.json"
+schema = "schema.json"
+
+[[tool.oicana.inputs]]
+type = "json"
+key = "two"
+default = "sample.json"
+schema = "schema.json"
+
+[[tool.oicana.inputs]]
+type = "json"
+key = "three"
+default = "sample.json"
+schema = "schema.json"

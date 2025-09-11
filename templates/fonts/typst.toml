@@ -1,0 +1,15 @@
+[package]
+name = "fonts"
+version = "0.1.0"
+entrypoint = "main.typ"
+authors = ["Niklas Eicker <git@nikl.me>"]
+description = "Example oicana template using custom fonts."
+
+[tool.oicana]
+manifest_version = 1
+
+[[tool.oicana.inputs]]
+type = "json"
+key = "data"
+default = "sample.json"
+schema = "schema.json"

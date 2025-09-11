@@ -1,0 +1,20 @@
+[package]
+name = "invoice"
+version = "0.1.0"
+entrypoint = "main.typ"
+authors = ["Niklas Eicker <git@nikl.me>"]
+description = "An example invoice template."
+
+[tool.oicana]
+manifest_version = 1
+
+[[tool.oicana.inputs]]
+type = "json"
+key = "invoice"
+default = "invoice.json"
+schema = "invoice.schema.json"
+
+[[tool.oicana.inputs]]
+type = "blob"
+key = "banner"
+default = { file = "oicana.png", meta = { image_format = "png" } }

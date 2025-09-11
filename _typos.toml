@@ -1,0 +1,8 @@
+[default]
+locale = "en-us"
+extend-ignore-identifiers-re = [
+    "typ"
+]
+
+[files]
+extend-exclude = ["fonts/"]

@@ -1,0 +1,16 @@
+[package]
+name = "test"
+version = "0.1.0"
+entrypoint = "template.typ"
+authors = ["Niklas Eicker <git@nikl.me>"]
+description = "A test template."
+
+[tool.oicana]
+manifest_version = 1
+tests = "tests"
+
+[[tool.oicana.inputs]]
+type = "json"
+key = "data"
+default = "sample.json"
+schema = "schema.json"

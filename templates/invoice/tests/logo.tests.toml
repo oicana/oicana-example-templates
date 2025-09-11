@@ -1,0 +1,18 @@
+tests_version = 1
+
+[[test]]
+name = "default-logo"
+mode = "development"
+
+[[test]]
+name = "custom-logo"
+
+[[test.inputs]]
+type = "blob"
+key = "banner"
+file = "assets/cargo.png"
+
+[[test.inputs]]
+type = "json"
+key = "invoice"
+file = "../invoice.json"

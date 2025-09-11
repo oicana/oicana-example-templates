@@ -1,0 +1,25 @@
+[package]
+name = "invoice_zugferd"
+version = "0.1.0"
+entrypoint = "main.typ"
+authors = ["Niklas Eicker <git@nikl.me>"]
+description = "An electronic ZUGFeRD invoice."
+
+[tool.oicana]
+manifest_version = 1
+
+[[tool.oicana.inputs]]
+type = "json"
+key = "invoice"
+default = "invoice.json"
+schema = "invoice.schema.json"
+
+[[tool.oicana.inputs]]
+type = "blob"
+key = "banner"
+default = { file = "oicana.png", meta = { image_format = "png" } }
+
+[[tool.oicana.inputs]]
+type = "blob"
+key = "zugferd"
+default = { file = "factur-x.xml" }

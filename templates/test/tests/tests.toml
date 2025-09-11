@@ -1,0 +1,17 @@
+tests_version = 1
+
+[[test]]
+name = "development"
+
+[[test.inputs]]
+type = "json"
+key = "data"
+file = "../sample.json"
+
+[[test]]
+name = "largerTable"
+
+[[test.inputs]]
+type = "json"
+key = "data"
+file = "largerTable.json"

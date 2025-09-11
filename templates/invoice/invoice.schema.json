@@ -1,0 +1,69 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://nikl.me/invoice.schema.json",
+    "title": "Invoice",
+    "description": "Invoice data to compile the template",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [],
+    "properties": {
+        "id": {
+          "description": "Id of the invoice",
+          "type": "string"
+        },
+        "issuingDate": {
+            "description": "Date at which the invoice is issued",
+            "type": "string"
+        },
+        "deliveryDate": {
+            "description": "Date at which the invoice is delivered",
+            "type": "string"
+        },
+        "dueDate": {
+            "description": "Date at which the invoice is due",
+            "type": "string"
+        },
+        "biller": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+                "name": {
+                    "description": "Date at which the invoice is due",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Date at which the invoice is due",
+                    "type": "string"
+                },
+                "company": {
+                    "description": "Date at which the invoice is due",
+                    "type": "string"
+                },
+                "vat-id": {
+                    "description": "Date at which the invoice is due",
+                    "type": "string"
+                },
+                "iban": {
+                    "description": "Date at which the invoice is due",
+                    "type": "string"
+                },
+                "address": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [],
+                    "properties": {
+                      "vat-id": {
+                          "description": "Date at which the invoice is due",
+                          "type": "string"
+                      },
+                      "iban": {
+                          "description": "Date at which the invoice is due",
+                          "type": "string"
+                      }
+                    }
+                }
+            } 
+        }
+    }
+}

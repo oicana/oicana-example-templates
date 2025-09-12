@@ -1,8 +1,10 @@
 # Oicana example templates
 
-> Note: while the [oicana package](https://github.com/oicana/oicana/tree/main/integrations/typst) is not published on the Typst Universe yet, the tempalates in this repository require it to be installed locally. Please follow [the instructions on the website for how to install a Typst package locally](https://docs.oicana.com/oicana-templates/dependencies).
+> Note: while the [oicana package](https://github.com/oicana/oicana/tree/main/integrations/typst) is not published on the Typst Universe yet, the templates in this repository require it to be installed locally. Please follow [the instructions on the website for how to install a Typst package on your machine](https://docs.oicana.com/oicana-templates/dependencies).
 
-This repository contains Oicana templates for generating documents.
+This repository contains example Oicana templates. These templates can be packed with the Oicana CLI and used to create documents through integrations.
+
+See the documentation for more info: https://docs.oicana.com
 
 ## Setup
 

@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate-links:
+    name: Check for dead links in docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: check readme links
+        run: npx linkinator README.md
+
+  check-format:
+    name: check typst files format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: install typstyle
+        run: cargo binstall typstyle
+      - name: check format
+        run: typstyle templates --diff -v

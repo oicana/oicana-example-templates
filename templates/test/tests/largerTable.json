@@ -1,23 +1,23 @@
 {
-  "test": "Some test data\n\nmultiple lines...",
+  "test": "With more test data\n\nthat has multiple lines!",
   "items": [
     {
       "name": "Frank",
-      "one": "first",
-      "two": "second",
-      "three": "third"
+      "one": "A",
+      "two": "C",
+      "three": "A"
     },
     {
       "name": "John",
-      "one": "first_john",
-      "two": "second_john",
-      "three": "third_john"
+      "one": "C",
+      "two": "no show",
+      "three": "B"
     },
     {
       "name": "Albert",
-      "one": "1",
-      "two": "2",
-      "three": "3"
+      "one": "B",
+      "two": "B",
+      "three": "A"
     }
   ]
 }

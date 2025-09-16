@@ -1,7 +1,5 @@
 # Oicana example templates
 
-> Note: while the [oicana package](https://github.com/oicana/oicana/tree/main/integrations/typst) is not published on the Typst Universe yet, the templates in this repository require it to be installed locally. Please follow [the instructions on the website for how to install a Typst package on your machine](https://docs.oicana.com/oicana-templates/dependencies).
-
 This repository contains example Oicana templates. These templates can be packed with the Oicana CLI and used to create documents through integrations.
 
 See the documentation for more info: https://docs.oicana.com
@@ -21,27 +19,50 @@ You can repeat `3.` for multiple templates. Any change in a template will trigge
 
 The preview is interactive. For most parts of the output you can click to jump to the relevant position in the code.
 
+You can use [typstyle] to format Typst files. After installing according to the projects Readme, run `typstyle -i .` to format all `.typ` files in the repository.
 
-### Formatting
+## Minimal example
 
-You can use [typstyle] to format Typst files. After installing according to the Projects Readme, run `typstyle -i .` to format all `.typ` files in the repository.
+The minimal Oicana template has no dynamic inputs and consists of two files: `typst.toml` and `main.typ`
+
+The minimal manifest `typst.toml` looks like
+```toml
+[package]
+name = "minimal"
+version = "0.1.0"
+entrypoint = "main.typ"
+
+[tool.oicana]
+manifest_version = 1
+```
+
+And the `main.typ` file contains "normal" Typst content:
+```typst
+= Hello from Typst
+
+This template will always render to the same text.
+To use the full potential of Oicana, #link("https://docs.oicana.com/templates/inputs")[introduce some dynamic inputs].
+```
 
 ## Using the Oicana CLI
 
-Example commands to compile templates:
-
-- `oicana compile templates/invoice -f pdf -j invoice=templates/invoice/invoice.json -b banner=templates/invoice/oicana.png`
-- `oicana compile templates/test -j data=templates/test/sample.json`
-- `oicana compile templates/dependency -j data=templates/package/sample.json`
-
-Example commands to package templates:
+To use a template with an integration (the C# package for example), it has to be packed.
+Here are some example commands to pack templates:
 
 - `oicana pack --all` to pack all templates in the current directory (including child directories)
 - `oicana pack templates/invoice -o packed` to pack the template in the `templates/invoice` directory and put the tar ball into the `packed` directory
 
-Run the snapshot tests: `oicana test -a`
+For testing purposes, you can also compile (not packed) templates with the Oicana CLI. Compilation output is placed in the `output` directory.
+Blob and json inputs can be given as file paths:
+
+- `oicana compile templates/invoice -f png -j invoice=templates/invoice/invoice.json -b banner=templates/invoice/oicana.png`
+- `oicana compile templates/test -j data=templates/test/tests/largerTable.json`
+- `oicana compile templates/dependency -j data=templates/package/sample.json`
+
+Templates [can define snapshot tests][snapshot-tests]. You can run all of the tests for all templates in a directory with `oicana test -a`.
 
 
 [typstyle]: https://github.com/Enter-tainer/typstyle/
 [typst-oicana]: https://github.com/oicana/oicana/tree/main/integrations/typst
 [invoice-harness]: https://github.com/oicana/invoice-harness
+[snapshot-tests]: https://docs.oicana.com/templates/tests

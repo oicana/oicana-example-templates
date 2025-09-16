@@ -1,5 +1,5 @@
 // This Oicana template demonstrates usage of custom fonts.
-#import "@local/oicana:0.1.0": setup
+#import "@preview/oicana:0.1.0": setup
 
 #show raw: it => [
   #text(fill: luma(42%))[#it]

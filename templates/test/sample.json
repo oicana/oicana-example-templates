@@ -1,17 +1,17 @@
 {
-  "test": "from sample data",
+  "test": "With sample data",
   "items": [
     {
       "name": "Frank",
-      "one": "first",
-      "two": "second",
-      "three": "third"
+      "one": "A",
+      "two": "C",
+      "three": "A"
     },
     {
       "name": "John",
-      "one": "first_john",
-      "two": "second_john",
-      "three": "third_john"
+      "one": "C",
+      "two": "no show",
+      "three": "B"
     }
   ]
 }

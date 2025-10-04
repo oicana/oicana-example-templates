@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nikl.me/invoice.schema.json",
+  "title": "Table data",
+  "description": "Table data fill the table example template.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["description", "rows"],
+  "properties": {
+    "description": {
+      "description": "Description of the table",
+      "type": "string"
+    },
+    "rows": {
+      "description": "Items listed in the table",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "one": { "type": "string" },
+          "two": { "type": "string" },
+          "three": { "type": "string" }
+        },
+        "required": ["name", "one", "two", "three"]
+      }
+    }
+  }
+}

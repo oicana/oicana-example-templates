@@ -3,7 +3,7 @@
 #let read_project_file(path) = return read(path, encoding: none);
 #let (input, _, _) = setup(read_project_file);
 
-a test template
+A template with multiple `json` inputs.
 
 #set table(
   stroke: none,
@@ -14,34 +14,34 @@ a test template
   inset: (right: 1.5em),
 )
 
-#input.one.test
+#input.one.description
 
 #table(
   columns: 4,
   [], [Exam 1], [Exam 2], [Exam 3],
-  ..for (name, one, two, three) in input.one.items {
+  ..for (name, one, two, three) in input.one.rows {
     (name, one, two, three)
   },
 )
 
 
-#input.two.test
+#input.two.description
 
 #table(
   columns: 4,
   [], [Exam 1], [Exam 2], [Exam 3],
-  ..for (name, one, two, three) in input.two.items {
+  ..for (name, one, two, three) in input.two.rows {
     (name, one, two, three)
   },
 )
 
 
-#input.three.test
+#input.three.description
 
 #table(
   columns: 4,
   [], [Exam 1], [Exam 2], [Exam 3],
-  ..for (name, one, two, three) in input.three.items {
+  ..for (name, one, two, three) in input.three.rows {
     (name, one, two, three)
   },
 )

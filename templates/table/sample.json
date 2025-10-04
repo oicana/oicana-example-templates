@@ -1,0 +1,17 @@
+{
+  "description": "Exam results with sample data:",
+  "rows": [
+    {
+      "name": "Frank",
+      "one": "A",
+      "two": "C",
+      "three": "A"
+    },
+    {
+      "name": "John",
+      "one": "C",
+      "two": "no show",
+      "three": "B"
+    }
+  ]
+}

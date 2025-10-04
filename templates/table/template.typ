@@ -3,8 +3,7 @@
 #let read_project_file(path) = return read(path, encoding: none);
 #let (input, _, _) = setup(read_project_file);
 
-Exam results: \
-#input.data.test
+#input.data.description
 
 #set table(
   stroke: none,
@@ -18,7 +17,7 @@ Exam results: \
 #table(
   columns: 4,
   [], [Exam 1], [Exam 2], [Exam 3],
-  ..for (name, one, two, three) in input.data.items {
+  ..for (name, one, two, three) in input.data.rows {
     (name, one, two, three)
   },
 )

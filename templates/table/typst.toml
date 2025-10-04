@@ -1,9 +1,9 @@
 [package]
-name = "test"
+name = "table"
 version = "0.1.0"
 entrypoint = "template.typ"
 authors = ["Niklas Eicker <git@nikl.me>"]
-description = "A test template."
+description = "An example template with a table."
 
 [tool.oicana]
 manifest_version = 1
@@ -12,5 +12,5 @@ tests = "tests"
 [[tool.oicana.inputs]]
 type = "json"
 key = "data"
-default = "sample.json"
-schema = "schema.json"
+default = "data.json"
+schema = "data.schema.json"

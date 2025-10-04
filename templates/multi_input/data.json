@@ -1,6 +1,6 @@
 {
-  "test": "With more test data\n\nthat has multiple lines!",
-  "items": [
+  "description": "Exam results with sample data:",
+  "rows": [
     {
       "name": "Frank",
       "one": "A",
@@ -12,12 +12,6 @@
       "one": "C",
       "two": "no show",
       "three": "B"
-    },
-    {
-      "name": "Albert",
-      "one": "B",
-      "two": "B",
-      "three": "A"
     }
   ]
 }

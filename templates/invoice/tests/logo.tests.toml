@@ -16,3 +16,12 @@ file = "assets/cargo.png"
 type = "json"
 key = "invoice"
 file = "../invoice.json"
+
+[[test]]
+name = "fuzz"
+snapshot = false
+
+[[test.inputs]]
+type = "json"
+key = "invoice"
+samples = 50

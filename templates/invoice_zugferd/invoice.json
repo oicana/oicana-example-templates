@@ -21,6 +21,8 @@
     "name": "Scrooge McDuck",
     "title": "Treasure Hunter",
     "vat-id": "DL7654321",
+    "company": "dsadsa Inventions Ltd.",
+    "iban": "DE89370400440532013000",
     "address": {
       "country": "Disneyland",
       "city": "Duckburg",
@@ -166,10 +168,7 @@
       "description": "Assembly",
       "dur-min": 160,
       "price": 53.33
-    }
-
-
-    ,
+    },
     {
       "date": "2016-04-05",
       "description": "Flux capacitor",
@@ -265,180 +264,6 @@
       "description": "Flux capacitor",
       "quantity": 1,
       "price": 2700
-    },
-    {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
-      "quantity": 2,
-      "price": 3600
-    },
-    {
-      "date": "2016-04-08",
-      "description": "Sonic screwdriver",
-      "quantity": 10,
-      "price": 800
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
-      "quantity": 2,
-      "price": 3600
-    },
-    {
-      "date": "2016-04-08",
-      "description": "Sonic screwdriver",
-      "quantity": 10,
-      "price": 800
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
-      "quantity": 2,
-      "price": 3600
-    },
-    {
-      "date": "2016-04-08",
-      "description": "Sonic screwdriver",
-      "quantity": 10,
-      "price": 800
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
-      "quantity": 2,
-      "price": 3600
-    },
-    {
-      "date": "2016-04-08",
-      "description": "Sonic screwdriver",
-      "quantity": 10,
-      "price": 800
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
-      "quantity": 2,
-      "price": 3600
-    },
-    {
-      "date": "2016-04-08",
-      "description": "Sonic screwdriver",
-      "quantity": 10,
-      "price": 800
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
-      "quantity": 2,
-      "price": 3600
-    },
-    {
-      "date": "2016-04-08",
-      "description": "Sonic screwdriver",
-      "quantity": 10,
-      "price": 800
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
-      "quantity": 2,
-      "price": 3600
-    },
-    {
-      "date": "2016-04-08",
-      "description": "Sonic screwdriver",
-      "quantity": 10,
-      "price": 800
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
-      "quantity": 2,
-      "price": 3600
-    },
-    {
-      "date": "2016-04-08",
-      "description": "Sonic screwdriver",
-      "quantity": 10,
-      "price": 800
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
-      "quantity": 2,
-      "price": 3600
-    },
-    {
-      "date": "2016-04-08",
-      "description": "Sonic screwdriver",
-      "quantity": 10,
-      "price": 800
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
-      "quantity": 2,
-      "price": 3600
-    },
-    {
-      "date": "2016-04-08",
-      "description": "Sonic fdadsadfadsaddddddddsdaafasddsadasfdsadfsadsad fdsaf adsa ",
-      "quantity": 10,
-      "price": 800
     }
   ]
 }

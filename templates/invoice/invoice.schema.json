@@ -5,65 +5,141 @@
     "description": "Invoice data to compile the template",
     "type": "object",
     "additionalProperties": false,
-    "required": [],
+    "required": [
+        "id",
+        "biller",
+        "recipient",
+        "issuingDate",
+        "dueDate",
+        "deliveryDate",
+        "items"
+    ],
     "properties": {
         "id": {
-          "description": "Id of the invoice",
-          "type": "string"
+            "description": "Id of the invoice",
+            "type": "string"
         },
         "issuingDate": {
             "description": "Date at which the invoice is issued",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
             "type": "string"
         },
         "deliveryDate": {
             "description": "Date at which the invoice is delivered",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
             "type": "string"
         },
         "dueDate": {
             "description": "Date at which the invoice is due",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
             "type": "string"
         },
         "biller": {
             "type": "object",
+            "required": [
+                "iban"
+            ],
+            "$ref": "#/$defs/contact"
+        },
+        "recipient": {
+            "type": "object",
+            "$ref": "#/$defs/contact"
+        },
+        "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "required": [
+                    "date",
+                    "description",
+                    "price"
+                ],
+                "properties": {
+                    "date": {
+                        "description": "Date When this item was completed",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "Date When this item was completed",
+                        "type": "string"
+                    },
+                    "quantity": {
+                        "description": "Date When this item was completed",
+                        "type": "number"
+                    },
+                    "dur-min": {
+                        "description": "Date When this item was completed",
+                        "type": "number"
+                    },
+                    "price": {
+                        "description": "Date When this item was completed",
+                        "type": "number"
+                    }
+                }
+            }
+        }
+    },
+    "$defs": {
+        "contact": {
+            "description": "A contact used in invoice data",
+            "type": "object",
             "additionalProperties": false,
-            "required": [],
+            "required": [
+                "name",
+                "title",
+                "iban",
+                "vat-id",
+                "company",
+                "address"
+            ],
             "properties": {
                 "name": {
-                    "description": "Date at which the invoice is due",
+                    "description": "Name of the contact",
                     "type": "string"
                 },
                 "title": {
-                    "description": "Date at which the invoice is due",
+                    "description": "Title of the contact",
                     "type": "string"
                 },
                 "company": {
-                    "description": "Date at which the invoice is due",
+                    "description": "Company of the contact",
                     "type": "string"
                 },
                 "vat-id": {
-                    "description": "Date at which the invoice is due",
+                    "description": "Vat id  of the contact",
+                    "minLength": 9,
                     "type": "string"
                 },
                 "iban": {
-                    "description": "Date at which the invoice is due",
+                    "description": "Iban of the contact",
                     "type": "string"
                 },
                 "address": {
                     "type": "object",
                     "additionalProperties": false,
-                    "required": [],
+                    "description": "Address data of the contact",
+                    "required": ["country", "city", "postal-code", "street"],
                     "properties": {
-                      "vat-id": {
-                          "description": "Date at which the invoice is due",
-                          "type": "string"
-                      },
-                      "iban": {
-                          "description": "Date at which the invoice is due",
-                          "type": "string"
-                      }
+                        "country": {
+                            "description": "Country",
+                            "type": "string"
+                        },
+                        "city": {
+                            "description": "City",
+                            "type": "string"
+                        },
+                        "postal-code": {
+                            "description": "Postal code",
+                            "type": "string"
+                        },
+                        "street": {
+                            "description": "Street",
+                            "type": "string"
+                        }
                     }
                 }
-            } 
+            }
         }
     }
 }

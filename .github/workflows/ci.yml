@@ -27,7 +27,7 @@ jobs:
           toolchain: stable
       - uses: taiki-e/install-action@v2
         with:
-          tool: typstyle, oicana
+          tool: typstyle, oicana_cli
       - name: check format
         run: typstyle templates --diff -v
       - name: run tempalte tests

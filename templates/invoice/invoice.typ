@@ -42,7 +42,7 @@
     //panic(
     //  "Invalid date string: " + date-str + "\n" + "Expected format: YYYY-MM-DD",
     //)
-    return  auto;
+    return auto
   }
   datetime(
     year: int(parts.at(0)),

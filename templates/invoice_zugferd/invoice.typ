@@ -40,36 +40,36 @@
 #let signature-line = line(length: 5cm, stroke: 0.4pt)
 
 #let texts = (
-    id: "en",
-    country: "GB",
-    recipient: "Recipient",
-    biller: "Biller",
-    invoice: "Invoice",
-    cancellation-invoice: "Cancellation Invoice",
-    cancellation-notice: (id, issuing-date) => [
-      As agreed, you will receive a credit note
-      for the invoice *#id* dated *#issuing-date*.
-    ],
-    invoice-id: "Invoice ID",
-    issuing-date: "Issuing Date",
-    delivery-date: "Delivery Date",
-    items: "Items",
-    closing: "Thank you for the good cooperation!",
-    number: "№",
-    date: "Date",
-    description: "Description",
-    duration: "Duration",
-    quantity: "Quantity",
-    price: "Price",
-    total-time: "Total working time",
-    subtotal: "Subtotal",
-    discount-of: "Discount of",
-    vat: "VAT of",
-    reverse-charge: "Reverse Charge",
-    total: "Total",
-    due-text: val => [Please transfer the money onto following bank account due to *#val*:],
-    owner: "Owner",
-    iban: "IBAN",
+  id: "en",
+  country: "GB",
+  recipient: "Recipient",
+  biller: "Biller",
+  invoice: "Invoice",
+  cancellation-invoice: "Cancellation Invoice",
+  cancellation-notice: (id, issuing-date) => [
+    As agreed, you will receive a credit note
+    for the invoice *#id* dated *#issuing-date*.
+  ],
+  invoice-id: "Invoice ID",
+  issuing-date: "Issuing Date",
+  delivery-date: "Delivery Date",
+  items: "Items",
+  closing: "Thank you for the good cooperation!",
+  number: "№",
+  date: "Date",
+  description: "Description",
+  duration: "Duration",
+  quantity: "Quantity",
+  price: "Price",
+  total-time: "Total working time",
+  subtotal: "Subtotal",
+  discount-of: "Discount of",
+  vat: "VAT of",
+  reverse-charge: "Reverse Charge",
+  total: "Total",
+  due-text: val => [Please transfer the money onto following bank account due to *#val*:],
+  owner: "Owner",
+  iban: "IBAN",
 )
 
 #let invoice(
@@ -160,7 +160,7 @@
         if title != none {
           title
         } else {
-            texts.invoice
+          texts.invoice
         }
       )
     ]
@@ -309,13 +309,20 @@
       table.cell(align: center)[*#texts.quantity*],
       table.cell(align: center)[*#texts.price*\ #text(size: 0.8em)[( € )]],
       table.cell(align: right)[#context {
-          if (query(<table-value>).find(el => (el.location().page() > here().page())) != none) {
-          let values = query(<table-value>).filter(el => (el.location().page() <= here().page()))
+        if (
+          query(<table-value>).find(el => (
+            el.location().page() > here().page()
+          ))
+            != none
+        ) {
+          let values = query(<table-value>).filter(el => (
+            el.location().page() <= here().page()
+          ))
           [*Zwischensumme*\ #text(size: 0.8em)[( € )]\ #values.map(it => it.value).sum()]
-          } else {
-            [*#texts.total*\ #text(size: 0.8em)[( € )]\ ]
-          }
-        }],
+        } else {
+          [*#texts.total*\ #text(size: 0.8em)[( € )]\ ]
+        }
+      }],
       table.hline(stroke: 0.5pt),
       [],
     ),

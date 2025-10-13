@@ -5,14 +5,15 @@
 #let read_project_file(path) = return read(path, encoding: none);
 #let (input, oicana-image, _) = setup(read_project_file);
 
+// This does not yet create a valid ZUGFeRD e-invoice! We
+// are missing https://github.com/typst/typst/issues/5667 in Typst to set the
+// required metadata. That said, if the xml file you pass into this template is
+// complete, you can get a "yellow validation" result from online validators.
 #zugferd(input.zugferd.bytes)
 
 #show: invoice.with(
-  language: "en",
   banner-image: oicana-image("banner"),
   invoice-id: input.invoice.id,
-  // // Uncomment this to create a cancellation invoice
-  // cancellation-id: "2024-03-24t210835",
   issuing-date: input.invoice.issuingDate,
   delivery-date: input.invoice.deliveryDate,
   due-date: input.invoice.dueDate,

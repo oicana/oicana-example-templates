@@ -1,9 +1,9 @@
 {
   "$schema": "invoice.schema.json",
-  "id": "2024-03-10t172205",
-  "issuingDate": "2024-04-27",
-  "deliveryDate": "2024-04-19",
-  "dueDate": "2024-05-06",
+  "id": "2025-03-10t172205",
+  "issuingDate": "2025-04-27",
+  "deliveryDate": "2025-04-19",
+  "dueDate": "2025-05-06",
   "biller": {
     "name": "Gyro Gearloose",
     "title": "Inventor",
@@ -30,190 +30,184 @@
   },
   "items": [
     {
-      "date": "2016-04-03",
-      "description": "Arc reactor",
-      "quantity": 1,
-      "price": 130
+      "date": "2025-04-03",
+      "description": "Blaster power pack",
+      "quantity": 4,
+      "price": 25
     },
     {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-03",
-      "description": "Arc reactor",
-      "quantity": 1,
-      "price": 130
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-03",
-      "description": "Arc reactor",
-      "quantity": 1,
-      "price": 130
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-03",
-      "description": "Arc reactor",
-      "quantity": 1,
-      "price": 130
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-03",
-      "description": "Arc reactor",
-      "quantity": 1,
-      "price": 130
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-03",
-      "description": "Arc reactor",
-      "quantity": 1,
-      "price": 130
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-03",
-      "description": "Arc reactor",
-      "quantity": 1,
-      "price": 130
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-03",
-      "description": "Arc reactor",
-      "quantity": 1,
-      "price": 130
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-03",
-      "description": "Arc reactor",
-      "quantity": 1,
-      "price": 130
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-03",
-      "description": "Arc reactor",
-      "quantity": 1,
-      "price": 130
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
-      "quantity": 1,
-      "price": 2700
-    },
-    {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
+      "date": "2025-04-03",
+      "description": "Hydraulic spanner",
       "quantity": 2,
-      "price": 3600
+      "price": 45
     },
     {
-      "date": "2016-04-08",
-      "description": "Sonic screwdriver",
-      "quantity": 10,
-      "price": 800
-    },
-    {
-      "date": "2016-04-12",
-      "description": "Assembly",
-      "dur-min": 160,
-      "price": 53.33
-    },
-    {
-      "date": "2016-04-08",
-      "description": "Sonic screwdriver",
-      "quantity": 10,
-      "price": 800
-    },
-    {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
-      "quantity": 2,
-      "price": 3600
-    },
-    {
-      "date": "2016-04-08",
-      "description": "Sonic screwdriver",
-      "quantity": 10,
-      "price": 800
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
+      "date": "2025-04-03",
+      "description": "Droid motivator",
       "quantity": 1,
-      "price": 2700
+      "price": 75
     },
     {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
+      "date": "2025-04-03",
+      "description": "Comlink",
+      "quantity": 3,
+      "price": 60
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Glow rod",
+      "quantity": 4,
+      "price": 15
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Medpac",
       "quantity": 2,
-      "price": 3600
+      "price": 55
     },
     {
-      "date": "2016-04-08",
-      "description": "Sonic screwdriver",
-      "quantity": 10,
-      "price": 800
-    },
-    {
-      "date": "2016-04-05",
-      "description": "Flux capacitor",
+      "date": "2025-04-03",
+      "description": "Datapad",
       "quantity": 1,
-      "price": 2700
+      "price": 85
     },
     {
-      "date": "2016-04-07",
-      "description": "Lightsaber",
+      "date": "2025-04-03",
+      "description": "Lightsaber repair and calibration",
+      "dur-min": 120,
+      "price": 200
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Power converter",
+      "quantity": 3,
+      "price": 40
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Breath mask",
       "quantity": 2,
-      "price": 3600
+      "price": 35
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Macrobinoculars",
+      "quantity": 1,
+      "price": 90
+    },
+    {
+      "date": "2025-03-03",
+      "description": "Hydrospanner",
+      "quantity": 4,
+      "price": 30
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Droid reprogramming",
+      "dur-min": 180,
+      "price": 300
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Fusion cutter",
+      "quantity": 2,
+      "price": 65
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Glitterstim spice",
+      "quantity": 1,
+      "price": 95
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Ion flux stabilizer",
+      "quantity": 3,
+      "price": 50
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Starship tuning",
+      "dur-min": 225,
+      "price": 375
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Electrobinoculars",
+      "quantity": 1,
+      "price": 80
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Stun cuffs",
+      "quantity": 2,
+      "price": 45
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Glowpaint",
+      "quantity": 4,
+      "price": 20
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Blaster maintenance",
+      "dur-min": 75,
+      "price": 125
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Energy cell",
+      "quantity": 4,
+      "price": 25
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Holo-projector",
+      "quantity": 1,
+      "price": 70
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Moisture vaporator part",
+      "quantity": 3,
+      "price": 35
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Binders",
+      "quantity": 2,
+      "price": 40
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Datacron",
+      "quantity": 1,
+      "price": 88
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Speeder bike repair",
+      "dur-min": 150,
+      "price": 250
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Thermal detonator",
+      "quantity": 1,
+      "price": 95
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Rebel alliance patch",
+      "quantity": 4,
+      "price": 10
+    },
+    {
+      "date": "2025-04-03",
+      "description": "Kyber crystal fragment",
+      "quantity": 1,
+      "price": 99
     }
   ]
 }

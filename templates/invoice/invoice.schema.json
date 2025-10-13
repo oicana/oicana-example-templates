@@ -15,6 +15,10 @@
         "items"
     ],
     "properties": {
+        "$schema": {
+            "description": "Schema of the object (soem editors will use this field by default).",
+            "type": "string"
+        },
         "id": {
             "description": "Id of the invoice",
             "type": "string"
@@ -35,11 +39,22 @@
             "type": "string"
         },
         "biller": {
+            "allOf": [{ "$ref": "#/$defs/contact" }],
             "type": "object",
             "required": [
-                "iban"
+                "iban",
+                "company"
             ],
-            "$ref": "#/$defs/contact"
+            "properties": {
+                "company": {
+                    "description": "Company of the contact",
+                    "type": "string"
+                },
+                "iban": {
+                    "description": "Iban of the contact",
+                    "type": "string"
+                }
+            }
         },
         "recipient": {
             "type": "object",
@@ -84,13 +99,10 @@
         "contact": {
             "description": "A contact used in invoice data",
             "type": "object",
-            "additionalProperties": false,
             "required": [
                 "name",
                 "title",
-                "iban",
                 "vat-id",
-                "company",
                 "address"
             ],
             "properties": {
@@ -102,17 +114,9 @@
                     "description": "Title of the contact",
                     "type": "string"
                 },
-                "company": {
-                    "description": "Company of the contact",
-                    "type": "string"
-                },
                 "vat-id": {
                     "description": "Vat id  of the contact",
                     "minLength": 9,
-                    "type": "string"
-                },
-                "iban": {
-                    "description": "Iban of the contact",
                     "type": "string"
                 },
                 "address": {

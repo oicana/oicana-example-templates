@@ -1,3 +1,5 @@
+// Adapted from https://github.com/ad-si/invoice-maker
+
 // Copyright 2015 Adrian Sieber
 //
 // Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
@@ -19,28 +21,14 @@
   str(intp) + "." + (str(decp) + "00").slice(0, 2)
 }
 
-// From https://stackoverflow.com/a/57080936/1850340
-#let verify-iban = (country, iban) => {
-  let iban-regexes = (
-    DE: regex("^DE[a-zA-Z0-9]{2}\s?([0-9]{4}\s?){4}([0-9]{2})$"),
-    GB: regex(
-      "^GB[a-zA-Z0-9]{2}\s?([a-zA-Z]{4}\s?){1}([0-9]{4}\s?){3}([0-9]{2})$",
-    ),
-  )
-
-  if country == none or not country in iban-regexes {
-    true
-  } else {
-    iban.find(iban-regexes.at(country)) != none
-  }
-}
-
 #let parse-date = date-str => {
   let parts = date-str.split("-")
   if parts.len() != 3 {
-    panic(
-      "Invalid date string: " + date-str + "\n" + "Expected format: YYYY-MM-DD",
-    )
+    // Disabled until the json schema fuzzer supports fuzzing string patterns
+    //panic(
+    //  "Invalid date string: " + date-str + "\n" + "Expected format: YYYY-MM-DD",
+    //)
+    return auto
   }
   datetime(
     year: int(parts.at(0)),
@@ -49,37 +37,9 @@
   )
 }
 
-#let TODO = box(
-  inset: (x: 0.5em),
-  outset: (y: 0.2em),
-  radius: 0.2em,
-  fill: rgb(255, 180, 170),
-)[
-  #text(
-    size: 0.8em,
-    weight: 600,
-    fill: rgb(100, 68, 64),
-  )[TODO]
-]
-
-#let horizontalrule = [
-  #v(8mm)
-  #line(
-    start: (20%, 0%),
-    end: (80%, 0%),
-    stroke: 0.8pt + gray,
-  )
-  #v(8mm)
-]
-
 #let signature-line = line(length: 5cm, stroke: 0.4pt)
 
-#let endnote(num, contents) = [
-  #stack(dir: ltr, spacing: 3pt, super[#num], contents)
-]
-
-#let languages = (
-  en: (
+#let texts = (
     id: "en",
     country: "GB",
     recipient: "Recipient",
@@ -110,11 +70,9 @@
     due-text: val => [Please transfer the money onto following bank account due to *#val*:],
     owner: "Owner",
     iban: "IBAN",
-  ),
 )
 
 #let invoice(
-  language: "en",
   country: none,
   title: none,
   banner-image: none,
@@ -135,7 +93,7 @@
   doc,
 ) = {
   // Set styling defaults
-  styling.font = styling.at("font", default: "Liberation Sans")
+  styling.font = styling.at("font", default: "Libertinus Serif")
   styling.font-size = styling.at("font-size", default: 11pt)
   styling.margin = styling.at(
     "margin",
@@ -147,28 +105,11 @@
     ),
   )
 
-  language = if data != none {
-    data.at("language", default: language)
-  } else {
-    language
-  }
-
-  // Translations
-  let t = if type(language) == str {
-    languages.at(language)
-  } else if type(language) == dictionary {
-    language
-  } else {
-    panic("Language must be either a string or a dictionary.")
-  }
-
   if data != none {
-    language = data.at("language", default: language)
-    country = data.at("country", default: t.country)
+    country = data.at("country", default: texts.country)
     title = data.at("title", default: title)
     banner-image = data.at("banner-image", default: banner-image)
     invoice-id = data.at("invoice-id", default: invoice-id)
-    cancellation-id = data.at("cancellation-id", default: cancellation-id)
     issuing-date = data.at("issuing-date", default: issuing-date)
     delivery-date = data.at("delivery-date", default: delivery-date)
     due-date = data.at("due-date", default: due-date)
@@ -182,13 +123,6 @@
     vat = data.at("vat", default: vat)
   }
 
-  // Verify inputs
-  assert(
-    verify-iban(country, biller.iban),
-    message: "Invalid IBAN " + biller.iban + " for country " + country,
-  )
-
-  let signature = ""
   let issuing-date = if issuing-date != none {
     issuing-date
   } else {
@@ -207,7 +141,7 @@
   )
   set par(justify: true)
   set text(
-    lang: t.id,
+    lang: texts.id,
     font: if styling.font != none {
       styling.font
     } else {
@@ -226,35 +160,11 @@
         if title != none {
           title
         } else {
-          if cancellation-id != none {
-            t.cancellation-invoice
-          } else {
-            t.invoice
-          }
+            texts.invoice
         }
       )
     ]
   ]]
-
-  let invoice-id-norm = if invoice-id != none {
-    if cancellation-id != none {
-      cancellation-id
-    } else {
-      invoice-id
-    }
-  } else {
-    TODO
-    // TODO: Reactivate after Typst supports hour, minute, and second
-    // datetime
-    //   .today()
-    //   .display("[year]-[month]-[day]t[hour][minute][second]")
-  }
-
-  let delivery-date = if delivery-date != none {
-    delivery-date
-  } else {
-    TODO
-  }
 
   align(
     center,
@@ -262,9 +172,9 @@
       columns: 2,
       align: (right, left),
       inset: 4pt,
-      [#t.invoice-id:], [*#invoice-id-norm*],
-      [#t.issuing-date:], [*#issuing-date*],
-      [#t.delivery-date:], [*#delivery-date*],
+      [#texts.invoice-id:], [*#invoice-id*],
+      [#texts.issuing-date:], [*#issuing-date*],
+      [#texts.delivery-date:], [*#delivery-date*],
     ),
   )
 
@@ -272,7 +182,7 @@
 
   box(height: 10em)[
     #columns(2, gutter: 4em)[
-      === #t.recipient
+      === #texts.recipient
       #v(0.5em)
       #recipient.name \
       #{
@@ -290,7 +200,7 @@
       #recipient.vat-id
 
 
-      === #t.biller
+      === #texts.biller
       #v(0.5em)
       #biller.name \
       #{
@@ -311,10 +221,10 @@
 
 
   if cancellation-id != none {
-    (t.cancellation-notice)(invoice-id, issuing-date)
+    (texts.cancellation-notice)(invoice-id, issuing-date)
   }
 
-  [== #t.items]
+  [== #texts.items]
 
   v(1em)
 
@@ -373,36 +283,38 @@
   table(
     columns: (auto, auto, 1fr, auto, auto, auto, auto),
     align: (col, row) => if row == 0 {
-      (right, left, left, center, center, center, center).at(col)
+      (right, left, left, center, center, center, right).at(col)
     } else {
       (right, left, left, right, right, right, right).at(col)
     },
     inset: 6pt,
     table.header(
-      // TODO: Add after https://github.com/typst/typst/issues/3734
-      // align: (right,left,left,center,center,center,center,),
       table.hline(stroke: 0.5pt),
-      [*#t.number*],
-      [*#t.date*],
-      [*#t.description*],
-      [*#t.duration*\ #text(size: 0.8em)[( min )]],
-      [*#t.quantity*],
-      [*#t.price*\ #text(size: 0.8em)[( € )]],
-      [*#t.total*\ #text(size: 0.8em)[( € )]],
+      [*#texts.number*],
+      [*#texts.date*],
+      [*#texts.description*],
+      [*#texts.duration*\ #text(size: 0.8em)[( min )]],
+      [*#texts.quantity*],
+      [*#texts.price*\ #text(size: 0.8em)[( € )]],
+      [*#texts.total*\ #text(size: 0.8em)[( € )]],
       table.hline(stroke: 0.5pt),
     ),
     ..items.enumerate().map(((index, item)) => entry(index, item)).flatten(),
     table.footer(
       table.hline(stroke: 0.5pt),
-      [*#t.number*],
-      [*#t.date*],
-      [*#t.description*],
-      [*#t.duration*\ #text(size: 0.8em)[( min )]],
-      [*#t.quantity*],
-      [*#t.price*\ #text(size: 0.8em)[( € )]],
-      [*Zwischensumme*\ #text(size: 0.8em)[( € )]\ #context {
+      table.cell(align: right)[*#texts.number*],
+      table.cell(align: left)[*#texts.date*],
+      table.cell(align: left)[*#texts.description*],
+      table.cell(align: center)[*#texts.duration*\ #text(size: 0.8em)[( min )]],
+      table.cell(align: center)[*#texts.quantity*],
+      table.cell(align: center)[*#texts.price*\ #text(size: 0.8em)[( € )]],
+      table.cell(align: right)[#context {
+          if (query(<table-value>).find(el => (el.location().page() > here().page())) != none) {
           let values = query(<table-value>).filter(el => (el.location().page() <= here().page()))
-          values.map(it => it.value).sum()
+          [*Zwischensumme*\ #text(size: 0.8em)[( € )]\ #values.map(it => it.value).sum()]
+          } else {
+            [*#texts.total*\ #text(size: 0.8em)[( € )]\ ]
+          }
         }],
       table.hline(stroke: 0.5pt),
       [],
@@ -451,17 +363,17 @@
 
   let table-entries = (
     if total-duration != 0 {
-      ([#t.total-time:], [*#total-duration min*])
+      ([#texts.total-time:], [*#total-duration min*])
     },
     if (discount-value != 0) or (vat != 0) {
       (
-        [#t.subtotal:],
+        [#texts.subtotal:],
         [#{ add-zeros(cancel-neg * sub-total) } €],
       )
     },
     if discount-value != 0 {
       (
-        [#t.discount-of #discount-label
+        [#texts.discount-of #discount-label
           #{
             if discount.reason != "" {
               "(" + discount.reason + ")"
@@ -472,15 +384,15 @@
     },
     if not has-reverse-charge and (vat != 0) {
       (
-        [#t.vat #{ vat * 100 } %:],
+        [#texts.vat #{ vat * 100 } %:],
         [#{ add-zeros(cancel-neg * tax) } €],
       )
     },
     if (has-reverse-charge) {
-      ([#t.vat:], text(0.9em)[#t.reverse-charge])
+      ([#texts.vat:], text(0.9em)[#texts.reverse-charge])
     },
     (
-      [*#t.total*:],
+      [*#texts.total*:],
       [*#add-zeros(cancel-neg * total) €*],
     ),
   ).filter(entry => entry != none)
@@ -510,14 +422,12 @@
         ).display("[year]-[month]-[day]")
       }
 
-      (t.due-text)(due-date)
+      (texts.due-text)(due-date)
 
       v(1em)
       align(center)[
         #table(
           fill: grayish,
-          // stroke: 1pt + blue,
-          // columns: 2, // TODO: Doesn't work for unknown reason
           columns: (8em, auto),
           inset: (col, row) => if col == 0 {
             if row == 0 { (top: 1.2em, right: 0.6em, bottom: 0.6em) } else {
@@ -530,17 +440,17 @@
           },
           align: (col, row) => (right, left).at(col),
           table.hline(stroke: 0.5pt),
-          [#t.owner:], [*#biller.name*],
-          [#t.iban:], [*#biller.iban*],
+          [#texts.owner:], [*#biller.name*],
+          [#texts.iban:], [*#biller.iban*],
           table.hline(stroke: 0.5pt),
         )
       ]
       v(1em)
 
-      t.closing
+      texts.closing
     } else {
       v(1em)
-      align(center, strong(t.closing))
+      align(center, strong(texts.closing))
     }
   ]
 

@@ -25,7 +25,7 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
       - uses: taiki-e/install-action@v2
         with:
-          tool: typstyle, oicana_cli@0.1.0-alpha.2
+          tool: typstyle, oicana_cli@0.1.0-alpha.4
       - name: check format
         run: typstyle templates --diff -v
       - name: run tempalte tests

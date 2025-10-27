@@ -5,6 +5,8 @@
 #let read_project_file(path) = return read(path, encoding: none);
 #let (input, _, _) = setup(read_project_file);
 
+#set document(date: datetime.today())
+
 #show heading: it => [
   #set align(center)
   #set text(13pt, weight: "regular")

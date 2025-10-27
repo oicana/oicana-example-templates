@@ -3,6 +3,8 @@
 #let read_project_file(path) = return read(path, encoding: none);
 #let (input, _, _) = setup(read_project_file);
 
+#set document(date: datetime.today())
+
 #input.data.description
 
 #set table(

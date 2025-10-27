@@ -1,3 +1,5 @@
+#set document(date: datetime.today())
+
 = Hello from Typst
 
 This template will always render to the same text.

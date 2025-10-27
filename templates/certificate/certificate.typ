@@ -1,6 +1,8 @@
 #import "@preview/curvly:0.1.0": *
 
 #let certificate(name: none, body) = {
+  set document(date: datetime.today())
+
   let line-with-gradient = line(length: 8cm, stroke: (
     paint: gradient.linear(white, black, white),
   ))

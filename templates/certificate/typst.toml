@@ -2,6 +2,7 @@
 name = "certificate"
 version = "0.1.0"
 entrypoint = "main.typ"
+description = "Simple example for a certification template."
 
 [tool.oicana]
 manifest_version = 1

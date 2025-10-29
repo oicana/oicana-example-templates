@@ -2,8 +2,7 @@
 name = "invoice"
 version = "0.1.0"
 entrypoint = "main.typ"
-authors = ["Niklas Eicker <git@nikl.me>"]
-description = "An example invoice template."
+description = "An example Oicana template for invoices."
 
 [tool.oicana]
 manifest_version = 1

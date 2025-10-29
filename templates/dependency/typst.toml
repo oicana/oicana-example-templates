@@ -2,8 +2,7 @@
 name = "dependency"
 version = "0.1.0"
 entrypoint = "main.typ"
-authors = ["Niklas Eicker <git@nikl.me>"]
-description = "An example Oicana template with a third party dependency."
+description = "An example Oicana template using a rather render-heavy third party dependency."
 
 [tool.oicana]
 manifest_version = 1

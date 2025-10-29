@@ -2,8 +2,7 @@
 name = "invoice_zugferd"
 version = "0.1.0"
 entrypoint = "main.typ"
-authors = ["Niklas Eicker <git@nikl.me>"]
-description = "An electronic ZUGFeRD invoice."
+description = "Example Oicana template for invoices with support for the ZUGFeRD electronic invoice standard."
 
 [tool.oicana]
 manifest_version = 1

@@ -2,8 +2,7 @@
 name = "multi_input"
 version = "0.1.0"
 entrypoint = "template.typ"
-authors = ["Niklas Eicker <git@nikl.me>"]
-description = "An example template with multiple json inputs."
+description = "Example Oicana template with multiple json inputs."
 
 [tool.oicana]
 manifest_version = 1

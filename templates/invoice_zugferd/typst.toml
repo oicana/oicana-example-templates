@@ -2,7 +2,7 @@
 name = "invoice_zugferd"
 version = "0.1.0"
 entrypoint = "main.typ"
-description = "Example Oicana template for invoices with support for the ZUGFeRD electronic invoice standard."
+description = "Invoice template with ZUGFeRD/Factur-X electronic invoicing standard support."
 
 [tool.oicana]
 manifest_version = 1

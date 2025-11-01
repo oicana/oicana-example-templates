@@ -2,7 +2,7 @@
 name = "fonts"
 version = "0.1.0"
 entrypoint = "main.typ"
-description = "Example Oicana template using custom fonts."
+description = "Template showcasing custom font integration and multilingual text rendering."
 
 [tool.oicana]
 manifest_version = 1

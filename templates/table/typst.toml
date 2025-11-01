@@ -1,8 +1,8 @@
 [package]
 name = "table"
 version = "0.1.0"
-entrypoint = "template.typ"
-description = "Example Oicana template with a table filled by a json input."
+entrypoint = "main.typ"
+description = "Dynamic table populated from JSON data."
 
 [tool.oicana]
 manifest_version = 1

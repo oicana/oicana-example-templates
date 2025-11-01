@@ -5,207 +5,207 @@
   "deliveryDate": "2025-04-19",
   "dueDate": "2025-05-06",
   "biller": {
-    "name": "Gyro Gearloose",
-    "title": "Inventor",
-    "company": "Inventions Ltd.",
-    "vat-id": "DL1234567",
+    "name": "Alex Johnson",
+    "title": "Senior Consultant",
+    "company": "Example Solutions GmbH",
+    "vat-id": "DE1234567",
     "iban": "DE89370400440532013000",
     "address": {
-      "country": "Disneyland",
-      "city": "Duckburg",
-      "postal-code": "123456",
-      "street": "Inventor Drive 23"
+      "country": "Germany",
+      "city": "Berlin",
+      "postal-code": "10115",
+      "street": "Sample Street 23"
     }
   },
   "recipient": {
-    "name": "Scrooge McDuck",
-    "title": "Treasure Hunter",
-    "vat-id": "DL7654321",
+    "name": "Maria Schmidt",
+    "title": "IT Manager",
+    "vat-id": "DE7654321",
     "address": {
-      "country": "Disneyland",
-      "city": "Duckburg",
-      "postal-code": "123456",
-      "street": "Killmotor Hill 1"
+      "country": "Germany",
+      "city": "Munich",
+      "postal-code": "80331",
+      "street": "Business Avenue 1"
     }
   },
   "items": [
     {
       "date": "2025-04-03",
-      "description": "Blaster power pack",
+      "description": "Wireless keyboard",
       "quantity": 4,
       "price": 25
     },
     {
       "date": "2025-04-03",
-      "description": "Hydraulic spanner",
+      "description": "USB-C cable",
       "quantity": 2,
       "price": 45
     },
     {
       "date": "2025-04-03",
-      "description": "Droid motivator",
+      "description": "External hard drive 2TB",
       "quantity": 1,
       "price": 75
     },
     {
       "date": "2025-04-03",
-      "description": "Comlink",
+      "description": "Webcam HD",
       "quantity": 3,
       "price": 60
     },
     {
       "date": "2025-04-03",
-      "description": "Glow rod",
+      "description": "LED desk lamp",
       "quantity": 4,
       "price": 15
     },
     {
       "date": "2025-04-03",
-      "description": "Medpac",
+      "description": "Laptop stand",
       "quantity": 2,
       "price": 55
     },
     {
       "date": "2025-04-03",
-      "description": "Datapad",
+      "description": "Tablet 10 inch",
       "quantity": 1,
       "price": 85
     },
     {
       "date": "2025-04-03",
-      "description": "Lightsaber repair and calibration",
+      "description": "Network infrastructure consultation",
       "dur-min": 120,
       "price": 200
     },
     {
       "date": "2025-04-03",
-      "description": "Power converter",
+      "description": "Power adapter",
       "quantity": 3,
       "price": 40
     },
     {
       "date": "2025-04-03",
-      "description": "Breath mask",
+      "description": "Noise-canceling headphones",
       "quantity": 2,
       "price": 35
     },
     {
       "date": "2025-04-03",
-      "description": "Macrobinoculars",
+      "description": "Projector wireless",
       "quantity": 1,
       "price": 90
     },
     {
       "date": "2025-03-03",
-      "description": "Hydrospanner",
+      "description": "Monitor 24 inch",
       "quantity": 4,
       "price": 30
     },
     {
       "date": "2025-04-03",
-      "description": "Droid reprogramming",
+      "description": "Software migration consulting",
       "dur-min": 180,
       "price": 300
     },
     {
       "date": "2025-04-03",
-      "description": "Fusion cutter",
+      "description": "Document scanner",
       "quantity": 2,
       "price": 65
     },
     {
       "date": "2025-04-03",
-      "description": "Glitterstim spice",
+      "description": "Network switch 8-port",
       "quantity": 1,
       "price": 95
     },
     {
       "date": "2025-04-03",
-      "description": "Ion flux stabilizer",
+      "description": "Ethernet cable Cat6",
       "quantity": 3,
       "price": 50
     },
     {
       "date": "2025-04-03",
-      "description": "Starship tuning",
+      "description": "Server optimization service",
       "dur-min": 225,
       "price": 375
     },
     {
       "date": "2025-04-03",
-      "description": "Electrobinoculars",
+      "description": "Wireless router",
       "quantity": 1,
       "price": 80
     },
     {
       "date": "2025-04-03",
-      "description": "Stun cuffs",
+      "description": "Cable organizer",
       "quantity": 2,
       "price": 45
     },
     {
       "date": "2025-04-03",
-      "description": "Glowpaint",
+      "description": "Whiteboard marker set",
       "quantity": 4,
       "price": 20
     },
     {
       "date": "2025-04-03",
-      "description": "Blaster maintenance",
+      "description": "Hardware maintenance and cleaning",
       "dur-min": 75,
       "price": 125
     },
     {
       "date": "2025-04-03",
-      "description": "Energy cell",
+      "description": "Rechargeable battery pack",
       "quantity": 4,
       "price": 25
     },
     {
       "date": "2025-04-03",
-      "description": "Holo-projector",
+      "description": "Conference speaker system",
       "quantity": 1,
       "price": 70
     },
     {
       "date": "2025-04-03",
-      "description": "Moisture vaporator part",
+      "description": "USB hub 4-port",
       "quantity": 3,
       "price": 35
     },
     {
       "date": "2025-04-03",
-      "description": "Binders",
+      "description": "Cable management box",
       "quantity": 2,
       "price": 40
     },
     {
       "date": "2025-04-03",
-      "description": "Datacron",
+      "description": "Portable SSD 1TB",
       "quantity": 1,
       "price": 88
     },
     {
       "date": "2025-04-03",
-      "description": "Speeder bike repair",
+      "description": "Database optimization service",
       "dur-min": 150,
       "price": 250
     },
     {
       "date": "2025-04-03",
-      "description": "Thermal detonator",
+      "description": "UPS battery backup",
       "quantity": 1,
       "price": 95
     },
     {
       "date": "2025-04-03",
-      "description": "Rebel alliance patch",
+      "description": "Office chair ergonomic",
       "quantity": 4,
       "price": 10
     },
     {
       "date": "2025-04-03",
-      "description": "Kyber crystal fragment",
+      "description": "Graphics tablet",
       "quantity": 1,
       "price": 99
     }

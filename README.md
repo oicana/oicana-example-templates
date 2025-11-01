@@ -57,7 +57,7 @@ Blob and json inputs can be given as file paths:
 
 - `oicana compile templates/invoice -f png -j invoice=templates/invoice/invoice.json -b banner=templates/invoice/oicana.png`
 - `oicana compile templates/table -j data=templates/table/tests/largerTable.json`
-- `oicana compile templates/dependency -j data=templates/package/sample.json`
+- `oicana compile templates/dependency -j data=templates/dependency/sample.json`
 
 Templates [can define snapshot tests][snapshot-tests]. You can run all of the tests for all templates in a directory with `oicana test -a`.
 

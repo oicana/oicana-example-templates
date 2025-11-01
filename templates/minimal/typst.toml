@@ -2,7 +2,7 @@
   name = "minimal"
   version = "0.1.0"
   entrypoint = "main.typ"
-  description = "Minimal example Oicana template with static content only."
+  description = "Minimal template with static content only."
 
   [tool.oicana]
   manifest_version = 1

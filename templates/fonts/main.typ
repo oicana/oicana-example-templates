@@ -48,10 +48,12 @@ This is Latin in Inria Serif. #sym.arrow.l custom font\
 
 #v(0.5cm)
 
-#set text(font: ())
-Glyphs that are not in the current font will fall back to the next font that includes them:
-
 هذا عربي.
 
+Glyphs that are not in the current font will fall back to the next font that includes them:
+
+
 #set text(font: "Noto Sans Arabic")
-هذا عربي. in Noto Sans Arabic #sym.arrow.l custom font
+هذا عربي.
+
+Arabic in Noto Sans Arabic #sym.arrow.l custom font

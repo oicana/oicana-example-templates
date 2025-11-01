@@ -2,7 +2,7 @@
 name = "dependency"
 version = "0.1.0"
 entrypoint = "main.typ"
-description = "An example Oicana template using a rather render-heavy third party dependency."
+description = "Template using the third-party package CeTZ for a chart."
 
 [tool.oicana]
 manifest_version = 1

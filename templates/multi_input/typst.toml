@@ -1,8 +1,8 @@
 [package]
 name = "multi_input"
 version = "0.1.0"
-entrypoint = "template.typ"
-description = "Example Oicana template with multiple json inputs."
+entrypoint = "main.typ"
+description = "Template with multiple JSON inputs."
 
 [tool.oicana]
 manifest_version = 1

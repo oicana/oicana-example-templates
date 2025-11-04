@@ -25,8 +25,19 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
       - uses: taiki-e/install-action@v2
         with:
-          tool: typstyle, oicana_cli@0.1.0-alpha.5
+          tool: typstyle
       - name: check format
         run: typstyle templates --diff -v
-      - name: run tempalte tests
+
+  tests:
+    name: run template tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: oicana_cli@0.1.0-alpha.5
+      - name: run template tests
         run: oicana test -a

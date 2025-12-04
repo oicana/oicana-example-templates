@@ -1,0 +1,17 @@
+[package]
+name = "accessibility"
+version = "0.1.0"
+entrypoint = "main.typ"
+description = "Template showcasing Universal Access (export to PDF/UA-1)."
+
+[tool.oicana]
+manifest_version = 1
+
+[tool.oicana.export.pdf]
+standards = ["ua-1"]
+
+[[tool.oicana.inputs]]
+type = "json"
+key = "data"
+default = "sample.json"
+schema = "schema.json"

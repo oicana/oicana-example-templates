@@ -67,7 +67,7 @@
   vat: "VAT of",
   reverse-charge: "Reverse Charge",
   total: "Total",
-  due-text: val => [Please transfer the money onto following bank account due to *#val*:],
+  due-text: val => [Please transfer the money to the following bank account until *#val*:],
   owner: "Owner",
   iban: "IBAN",
 )

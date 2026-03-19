@@ -219,7 +219,6 @@
     ]
   ]
 
-
   if cancellation-id != none {
     (texts.cancellation-notice)(invoice-id, issuing-date)
   }

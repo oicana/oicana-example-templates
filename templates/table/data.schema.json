@@ -7,6 +7,10 @@
   "additionalProperties": false,
   "required": ["description", "rows"],
   "properties": {
+    "$schema": {
+      "description": "Schema of the object (some editors will use this field by default).",
+      "type": "string"
+    },
     "description": {
       "description": "Description of the table",
       "type": "string"

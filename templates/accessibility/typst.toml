@@ -14,4 +14,3 @@ standards = ["ua-1"]
 type = "json"
 key = "data"
 default = "sample.json"
-schema = "schema.json"

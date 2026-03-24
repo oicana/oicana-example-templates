@@ -1,5 +1,5 @@
 // This example Oicana template demonstrates exporting PDFs with Universal Access (PDF/UA-1).
-#import "@preview/oicana:0.1.0": setup
+#import "@preview/oicana:0.1.1": setup
 
 #set document(date: datetime.today(), title: "Universal Access")
 

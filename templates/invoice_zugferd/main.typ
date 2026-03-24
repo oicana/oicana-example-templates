@@ -1,5 +1,5 @@
 #import "invoice.typ": *
-#import "@preview/oicana:0.1.0": setup
+#import "@preview/oicana:0.1.1": setup
 #import "@local/invoice-harness:0.1.1": zugferd
 
 #let read_project_file(path) = return read(path, encoding: none);

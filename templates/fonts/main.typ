@@ -1,5 +1,5 @@
 // This Oicana template demonstrates usage of custom fonts.
-#import "@preview/oicana:0.1.0": setup
+#import "@preview/oicana:0.1.1": setup
 
 #set document(date: datetime.today())
 

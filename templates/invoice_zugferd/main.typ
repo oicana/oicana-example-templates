@@ -2,8 +2,8 @@
 #import "@preview/oicana:0.1.1": setup
 #import "@local/invoice-harness:0.1.1": zugferd
 
-#let read_project_file(path) = return read(path, encoding: none);
-#let (input, oicana-image, _) = setup(read_project_file);
+#let read_project_file(path) = read(path, encoding: none)
+#let (input, oicana-image, _) = setup(read_project_file)
 
 // This does not yet create a valid ZUGFeRD e-invoice! We
 // are missing https://github.com/typst/typst/issues/5667 in Typst to set the

@@ -1,8 +1,8 @@
 #import "@preview/oicana:0.1.1": setup
 #import "certificate.typ": *
 
-#let read_project_file(path) = return read(path, encoding: none);
-#let (input, oicana-image, _) = setup(read_project_file);
+#let read_project_file(path) = read(path, encoding: none)
+#let (input, oicana-image, _) = setup(read_project_file)
 
 #let name = input.certificate.name
 

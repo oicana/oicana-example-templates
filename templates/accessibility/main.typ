@@ -3,8 +3,8 @@
 
 #set document(date: datetime.today(), title: "Universal Access")
 
-#let read_project_file(path) = read(path, encoding: none)
-#let (input, _, _) = setup(read_project_file)
+#let read-project-file(path) = read(path, encoding: none)
+#let (input, _, _) = setup(read-project-file)
 
 #title()
 

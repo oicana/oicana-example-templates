@@ -7,8 +7,8 @@
   #text(fill: luma(42%))[#it]
 ]
 
-#let read_project_file(path) = read(path, encoding: none)
-#let (input, _, _) = setup(read_project_file)
+#let read-project-file(path) = read(path, encoding: none)
+#let (input, _, _) = setup(read-project-file)
 
 #show heading: it => [
   #set align(center)

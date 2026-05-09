@@ -1,8 +1,8 @@
 #import "invoice.typ": *
 #import "@preview/oicana:0.1.1": setup
 
-#let read_project_file(path) = read(path, encoding: none)
-#let (input, oicana-image, _) = setup(read_project_file)
+#let read-project-file(path) = read(path, encoding: none)
+#let (input, oicana-image, _) = setup(read-project-file)
 
 #show: invoice.with(
   banner-image: oicana-image("banner"),

@@ -3,3 +3,4 @@
 output/
 packed/
 dist/
+**/*.compare.png

@@ -30,7 +30,7 @@
 
   move(dy: -0.75cm)[#ornamentLine]
 
-  text(20pt)[has mastered PDF templating with Typst using Oicana]
+  text(20pt)[has mastered document templating with Oicana]
 
   place(bottom + left)[#text(20pt)[https://oicana.com]]
   place(bottom + right)[#image("medal.svg")]

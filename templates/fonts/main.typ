@@ -37,7 +37,7 @@ The fonts "Libertinus Serif", "New Computer Modern", "DejaVu Sans Mono", and "Ne
 #set text(font: "Libertinus Serif")
 This is Latin in Libertinus Serif. \
 
-#set text(font: "New Computer modern")
+#set text(font: "New Computer Modern")
 This is Latin in New Computer Modern. \
 
 #set text(font: "DejaVu Sans Mono")
@@ -53,9 +53,9 @@ This is Latin in Inria Serif. #sym.arrow.l custom font\
 
 Arabic in Noto Sans Arabic #sym.arrow.l custom font
 
-#set text(font: "New Computer modern")
+#set text(font: "New Computer Modern")
 هذا عربي.
 
-Glyphs that are not in the current font will fall back to the next font that includes them. The arabic above is still in Noto Sans Arabic, because New Computer modern does not contain the right Glyphs.
+Glyphs that are not in the current font will fall back to the next font that includes them. The arabic above is still in Noto Sans Arabic, because New Computer Modern does not contain the right Glyphs.
 
 

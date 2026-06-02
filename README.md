@@ -2,7 +2,7 @@
 
 This repository contains example Oicana templates. These templates can be packed with the Oicana CLI and used to create documents through integrations.
 
-See the documentation for more info: https://docs.oicana.com
+See the documentation for more info: https://oicana.com/docs/
 
 ## Setup
 
@@ -41,7 +41,7 @@ And the `main.typ` file contains "normal" Typst content:
 = Hello from Typst
 
 This template will always render to the same text.
-To use the full potential of Oicana, #link("https://docs.oicana.com/templates/inputs")[introduce some dynamic inputs].
+To use the full potential of Oicana, #link("https://oicana.com/docs/templates/inputs/")[introduce some dynamic inputs].
 ```
 
 ## Using the Oicana CLI
@@ -65,4 +65,4 @@ Templates [can define snapshot tests][snapshot-tests]. You can run all of the te
 [typstyle]: https://github.com/Enter-tainer/typstyle/
 [typst-oicana]: https://github.com/oicana/oicana/tree/main/integrations/typst
 [invoice-harness]: https://github.com/oicana/invoice-harness
-[snapshot-tests]: https://docs.oicana.com/templates/tests
+[snapshot-tests]: https://oicana.com/docs/templates/tests/

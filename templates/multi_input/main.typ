@@ -1,49 +1,7 @@
 #import "@preview/oicana:0.1.1": setup
+#import "report.typ": report
 
 #let read-project-file(path) = read(path, encoding: none)
 #let (input, _, _) = setup(read-project-file)
 
-#set document(date: datetime.today())
-
-A template with multiple `json` inputs.
-
-#set table(
-  stroke: none,
-  gutter: 0.2em,
-  fill: (x, y) => if x == 0 or y == 0 {
-    gray
-  },
-  inset: (right: 1.5em),
-)
-
-#input.one.description
-
-#table(
-  columns: 4,
-  [], [Exam 1], [Exam 2], [Exam 3],
-  ..for (name, one, two, three) in input.one.rows {
-    (name, one, two, three)
-  },
-)
-
-
-#input.two.description
-
-#table(
-  columns: 4,
-  [], [Exam 1], [Exam 2], [Exam 3],
-  ..for (name, one, two, three) in input.two.rows {
-    (name, one, two, three)
-  },
-)
-
-
-#input.three.description
-
-#table(
-  columns: 4,
-  [], [Exam 1], [Exam 2], [Exam 3],
-  ..for (name, one, two, three) in input.three.rows {
-    (name, one, two, three)
-  },
-)
+#show: report.with(sections: (input.one, input.two, input.three))

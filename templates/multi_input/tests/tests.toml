@@ -1,0 +1,5 @@
+tests_version = 1
+
+[[test]]
+name = "development"
+mode = "development"

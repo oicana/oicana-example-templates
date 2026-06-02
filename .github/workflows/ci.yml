@@ -12,7 +12,7 @@ jobs:
     name: Check for dead links in docs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: check readme links
         run: npx linkinator README.md
 
@@ -20,7 +20,7 @@ jobs:
     name: check typst files format
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Install rust toolchain
         uses: dtolnay/rust-toolchain@stable
       - uses: taiki-e/install-action@v2
@@ -33,7 +33,7 @@ jobs:
     name: validate templates
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Install rust toolchain
         uses: dtolnay/rust-toolchain@stable
       - uses: taiki-e/install-action@v2
@@ -46,7 +46,7 @@ jobs:
     name: run template tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Install rust toolchain
         uses: dtolnay/rust-toolchain@stable
       - uses: taiki-e/install-action@v2

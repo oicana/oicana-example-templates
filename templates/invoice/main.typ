@@ -1,5 +1,5 @@
 #import "invoice.typ": *
-#import "@preview/oicana:0.1.1": setup
+#import "@preview/oicana:0.2.0": setup
 
 #let read-project-file(path) = read(path, encoding: none)
 #let (input, oicana-image, _) = setup(read-project-file)

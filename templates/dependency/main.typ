@@ -1,6 +1,6 @@
 #import "@preview/cetz:0.3.2"
 #import "@preview/cetz-plot:0.1.1"
-#import "@preview/oicana:0.1.1": setup
+#import "@preview/oicana:0.2.0": setup
 
 #let read-project-file(path) = read(path, encoding: none)
 #let (input, _, _) = setup(read-project-file)

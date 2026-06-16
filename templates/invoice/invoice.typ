@@ -129,8 +129,14 @@
     datetime.today().display("[year]-[month]-[day]")
   }
 
+  let doc-title = if title != none {
+    title
+  } else {
+    texts.invoice
+  }
+
   set document(
-    title: title,
+    title: doc-title,
     keywords: keywords,
     date: parse-date(issuing-date),
   )
@@ -151,20 +157,25 @@
   )
   set table(stroke: none)
 
+  // Keep the document's heading structure flat and unnumbered while
+  // preserving the original visual styling of the invoice title.
+  set heading(numbering: none)
+  show heading.where(level: 1): it => {
+    set text(size: styling.font-size)
+    align(center)[
+      #block(
+        inset: 2em,
+        above: 1.2em,
+        below: 1.2em,
+        text(weight: "bold", size: 2em, it.body),
+      )
+    ]
+  }
+
   // Offset page top margin for banner image
   [#pad(top: -10mm, banner-image)]
 
-  align(center)[#block(inset: 2em)[
-    #text(weight: "bold", size: 2em)[
-      #(
-        if title != none {
-          title
-        } else {
-          texts.invoice
-        }
-      )
-    ]
-  ]]
+  [= #doc-title]
 
   align(
     center,
@@ -182,7 +193,7 @@
 
   box(height: 10em)[
     #columns(2, gutter: 4em)[
-      === #texts.recipient
+      == #texts.recipient
       #v(0.5em)
       #recipient.name \
       #{
@@ -200,7 +211,7 @@
       #recipient.vat-id
 
 
-      === #texts.biller
+      == #texts.biller
       #v(0.5em)
       #biller.name \
       #{

@@ -7,6 +7,9 @@ description = "Invoice template with customizable items and billing details."
 [tool.oicana]
 manifest_version = 1
 
+[tool.oicana.export.pdf]
+standards = ["ua-1", "a-3b"]
+
 [[tool.oicana.inputs]]
 type = "json"
 key = "invoice"

@@ -4,6 +4,8 @@ This repository contains example Oicana templates. These templates can be packed
 
 See the documentation for more info: https://oicana.com/docs/
 
+> Note: Oicana currently uses Typst 0.15 with a patch that adds support for custom PDF metadata. To compile the `invoice_zugferd` template into a valid factur-x/ZUGFeRD e-invoice, please install https://github.com/oicana/invoice-harness as a local Typst package (see [the docs on how to do that](https://oicana.com/docs/templates/dependencies/#local-packages)). Using `invoice-harness` is only possible through Oicana or the patched Typst at the moment.
+
 ## Setup
 
 You should set up an IDE with support for Typst for intelli sense and live previews. There are a couple options, but for the sake of simplicity the following documents the setup for VS Code:

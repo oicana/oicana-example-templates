@@ -1,15 +1,11 @@
 #import "invoice.typ": *
 #import "@preview/oicana:0.2.0": setup
-#import "@local/invoice-harness:0.1.1": zugferd
+#import "@local/invoice-harness:0.1.1": *
 
 #let read-project-file(path) = read(path, encoding: none)
 #let (input, oicana-image, _) = setup(read-project-file)
 
-// This does not yet create a valid ZUGFeRD e-invoice! We
-// are missing https://github.com/typst/typst/issues/5667 in Typst to set the
-// required metadata. That said, if the xml file you pass into this template is
-// complete, you can get a "yellow validation" result from online validators.
-#zugferd(input.zugferd.bytes)
+#factur-x(input.zugferd.bytes, profiles.en16931)
 
 #show: invoice.with(
   banner-image: oicana-image("banner"),

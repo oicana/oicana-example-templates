@@ -4,3 +4,4 @@ output/
 packed/
 dist/
 **/*.compare.png
+templates/**/*.pdf
